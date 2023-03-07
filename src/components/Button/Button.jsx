@@ -19,7 +19,9 @@ class Button extends Component {
     onButtonClick() {
         this.setState({name: 'Cancelar'});
         console.log('Click!');
-        this.props.onButtonClickApp();
+        /*Comprobar si un prop se llama onButtonClickApp*/
+        if (this.props.onButtonClickApp)
+            this.props.onButtonClickApp(10);
     }
 }
 

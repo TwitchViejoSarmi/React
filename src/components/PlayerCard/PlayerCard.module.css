@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('Poppins-Bold.ttf') format('ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+.container {
+    background-color: #3b3b3b;
+    border: 1px solid black;
+    border-radius: 7px;
+    cursor: pointer;
+    height: auto;
+    width: 150px;
+    margin: 10px;
+    text-align: left;
+    padding: 0px;
+    color: white;
+}
+
+.playerImage {
+    display: block;
+    margin: auto;
+    background-color: black;
+    max-height: 100px;
+    width: auto;
+}
+
+.playerName {
+    font-family: 'Poppins', Times, serif;
+    font-size: x-large;
+    margin: 20px 10px 10px;
+}
+
+.playerDescription {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: x-small;
+    margin: 20px 10px 10px;
+}
