@@ -4,6 +4,8 @@ import './App.css';
 import PlayerCard from './components/PlayerCard/PlayerCard';
 import { useState } from 'react';
 import Home from './pages/Home/Home';
+import { useDispatch, useSelector } from "react-redux";
+import { decrement, increment, test } from "./redux/CounterSlice";
 /*import Button from './components/Button/Button';*/
 /*import { Component } from 'react';*/
 
@@ -20,10 +22,17 @@ function App() {
     description: 'Siuuuuu!!'
   }]);
 
+  const { count } = useSelector((state) => state.counter);
+  const dispatch = useDispatch();
+
   return (
     <div className='App'>
       <PlayerCard playerData={players[0]} />
       <PlayerCard playerData={players[1]} />
+      <h1> The count is: {count}</h1>
+      <button onClick={() => dispatch(increment())}> increment </button>
+      <button onClick={() => dispatch(decrement())}> decrement </button>
+      <button onClick={() => dispatch(test({ testValue: 33 }))}> test </button>
       <Routes>
         <Route path = '/' element={<Home/>}/>
       </Routes>
